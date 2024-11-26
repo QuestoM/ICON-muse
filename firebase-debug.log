@@ -1,0 +1,36 @@
+[debug] [2024-11-24T19:00:02.512Z] ----------------------------------------------------------------------
+[debug] [2024-11-24T19:00:02.517Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js projects:list
+[debug] [2024-11-24T19:00:02.518Z] CLI Version:   13.16.0
+[debug] [2024-11-24T19:00:02.519Z] Platform:      win32
+[debug] [2024-11-24T19:00:02.520Z] Node Version:  v18.18.0
+[debug] [2024-11-24T19:00:02.522Z] Time:          Sun Nov 24 2024 21:00:02 GMT+0200 (שעון ישראל (חורף))
+[debug] [2024-11-24T19:00:02.522Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-24T19:00:02.673Z] Object ".storage" in "firebase.json" has unknown property: {"additionalProperty":"cors"}
+[debug] [2024-11-24T19:00:02.674Z] Field ".storage" in "firebase.json" is possibly invalid: should be array
+[debug] [2024-11-24T19:00:02.675Z] Field ".storage" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2024-11-24T19:00:02.684Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-24T19:00:02.685Z] > authorizing via signed-in user (netanel@questo.media)
+[debug] [2024-11-24T19:00:02.693Z] > refreshing access token with scopes: []
+[debug] [2024-11-24T19:00:02.696Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-11-24T19:00:02.696Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-24T19:00:03.140Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-11-24T19:00:03.141Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-11-24T19:00:03.141Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2024-11-24T19:00:03.147Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:140:12)
+    at refreshTokens (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:514:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async getAccessToken (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:40:18)
+    at async Client.addAuthHeader (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:167:21)
+    at async Client.request (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:118:34)
+    at async getProjectPage (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:238:17)
+    at async getFirebaseProjectPage (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:255:23)
+    at async listFirebaseProjects (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:286:29)
+    at async Command.actionFn (C:\Users\netan\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\projects-list.js:51:20)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
